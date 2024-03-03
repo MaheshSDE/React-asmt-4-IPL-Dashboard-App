@@ -1,1 +1,170 @@
 /* Write your CSS here */
+.latest-match-container {
+  background-color: #0f172a;
+  border-radius: 5px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+.competingTeam {
+  font-family: 'Bree Serif';
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.date {
+  font-weight: 300;
+  font-family: 'Bree Serif';
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.venue {
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.result {
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.competingTeamLogo {
+  height: 100px;
+  width: 80px;
+}
+
+.separator {
+  width: 100%;
+}
+
+.bottom {
+  padding: 10px;
+}
+
+.firstInnings {
+  font-family: 'Bree Serif';
+  font-size: 15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.firstInningsValue {
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.secondInnings {
+  font-family: 'Bree Serif';
+  font-size: 15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.secondInningsValue {
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.manOfTheMatch {
+  font-family: 'Bree Serif';
+  font-size: 15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.manOfTheMatchValue {
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.umpires {
+  font-family: 'Bree Serif';
+  font-size: 15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.umpiresValue {
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-match-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 280px;
+    padding: 20px;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 60%;
+  }
+  .separator {
+    width: 0px;
+    height: 0px;
+  }
+  .competingTeam {
+    font-size: 25px;
+  }
+  .date {
+    font-size: 20px;
+  }
+  .venue {
+    font-size: 18px;
+  }
+  .result {
+    font-size: 18px;
+  }
+  .competingTeamLogo {
+    height: 230px;
+    width: 230px;
+  }
+  .firstInnings {
+    font-size: 20px;
+  }
+  .firstInningsValue {
+    font-size: 15px;
+  }
+  .secondInnings {
+    font-size: 20px;
+  }
+  .secondInningsValue {
+    font-size: 15px;
+  }
+  .manOfTheMatch {
+    font-size: 20px;
+  }
+  .manOfTheMatchValue {
+    font-size: 15px;
+  }
+  .umpires {
+    font-size: 20px;
+  }
+  .umpiresValue {
+    font-size: 15px;
+  }
+}

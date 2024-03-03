@@ -28,19 +28,19 @@ class TeamMatches extends Component {
     const updatedData = {
       teamBannerUrl: data.team_banner_url,
       latestMatchDetails: {
-        umpires: data.umpires,
-        result: data.result,
-        manOfTheMatch: data.man_of_the_match,
-        id: data.id,
-        date: data.date,
-        venue: data.venue,
-        competingTeam: data.competing_team,
-        competingTeamLogo: data.competing_team_logo,
-        firstInnings: data.first_innings,
-        secondInnings: data.second_innings,
-        matchStatus: data.match_status,
+        umpires: data.latest_match_details.umpires,
+        result: data.latest_match_details.result,
+        manOfTheMatch: data.latest_match_details.man_of_the_match,
+        id: data.latest_match_details.id,
+        date: data.latest_match_details.date,
+        venue: data.latest_match_details.venue,
+        competingTeam: data.latest_match_details.competing_team,
+        competingTeamLogo: data.latest_match_details.competing_team_logo,
+        firstInnings: data.latest_match_details.first_innings,
+        secondInnings: data.latest_match_details.second_innings,
+        matchStatus: data.latest_match_details.match_status,
       },
-      recentMatches: data.recentMatches.map(eachItem => ({
+      recentMatches: data.recent_matches.map(eachItem => ({
         umpires: eachItem.umpires,
         result: eachItem.result,
         manOfTheMatch: eachItem.man_of_the_match,
@@ -58,18 +58,25 @@ class TeamMatches extends Component {
   }
 
   render() {
+    const {match} = this.props
+    const {params} = match
+    const {id} = params
+
     const {isLoading, matchesData} = this.state
     const {teamBannerUrl, latestMatchDetails, recentMatches} = matchesData
     return (
       <div className="teamMatchContainer">
         {isLoading ? (
-          <div data-testid="loader">
+          <div testid="loader">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         ) : (
-          <div className="app-team-matches-container">
+          <div className={`app-team-matches-container ${id}`}>
             <img src={teamBannerUrl} alt="team banner" className="teamBanner" />
-            <LatestMatch latestMatchDetails={latestMatchDetails} />
+            <div className="latest-container">
+              <h1 className="latest-match-heading">Latest Matches</h1>
+              <LatestMatch latestMatchDetails={latestMatchDetails} />
+            </div>
             <ul className="unOrderList">
               {recentMatches.map(eachItem => (
                 <MatchCard matchDetails={eachItem} key={eachItem.id} />

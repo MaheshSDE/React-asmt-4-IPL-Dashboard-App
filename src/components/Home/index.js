@@ -42,13 +42,15 @@ class Home extends Component {
         </div>
         <div className="team-container">
           {isLoading ? (
-            <div data-testid="loader" className="Loader">
+            <div testid="loader" className="Loader">
               <Loader type="Oval" color="#ffffff" height={50} width={50} />
             </div>
           ) : (
-            teamsList.map(eachItem => (
-              <TeamCard details={eachItem} key={eachItem.id} />
-            ))
+            <ul>
+              {teamsList.map(eachItem => (
+                <TeamCard details={eachItem} key={eachItem.id} />
+              ))}
+            </ul>
           )}
         </div>
       </div>
